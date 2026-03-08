@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WeReadCorrently</string>
+
+    <string name="skip_button">Пропустить</string>
+    <string name="alert_enabled">Включить уведомления</string>
+    <string name="sound">Звук</string>
+    <string name="vibration">Вибрация</string>
+    <string name="camera_label">Камера:</string>
+    <string name="camera_front">Фронтальная</string>
+    <string name="camera_back">Тыловая</string>
+    <string name="continue_button">Продолжить</string>
+
+    <string name="onboarding_1_text">Добро пожаловать! Это приложение помогает следить за осанкой.</string>
+    <string name="onboarding_2_text">Держите телефон на правильном расстоянии от глаз.</string>
+    <string name="onboarding_3_text">Не наклоняйте голову слишком сильно.</string>
+</resources>

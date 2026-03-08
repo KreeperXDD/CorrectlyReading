@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.OnboardingActivity">
+
+    <!-- ViewPager2 для трёх подсказок -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Кнопка пропуска онбординга -->
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пропустить"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Контейнер быстрой настройки (изначально скрыт) -->
+    <LinearLayout
+        android:id="@+id/quickSetupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Предпросмотр камеры (CameraX PreviewView) -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Опции настройки -->
+        <CheckBox
+            android:id="@+id/checkboxAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Включить уведомления"/>
+
+        <CheckBox
+            android:id="@+id/checkboxSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Звук"/>
+
+        <CheckBox
+            android:id="@+id/checkboxVibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вибрация"/>
+
+        <!-- Переключатель камеры (фронтальная/тыловая) – можно сделать RadioGroup -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Камера:"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Фронтальная"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тыловая"/>
+        </RadioGroup>
+
+        <!-- Кнопка продолжения -->
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Продолжить"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

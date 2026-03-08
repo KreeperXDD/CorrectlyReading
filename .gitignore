@@ -1,0 +1,36 @@
+# Gradle & Build
+.gradle/
+**/build/
+*.apk
+*.aab
+
+# Local configuration
+local.properties
+
+# IDE files - оставляем ваши детальные исключения, но можно заменить на .idea/ целиком, если не нужно хранить настройки
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+*.iml
+
+# Kotlin
+.kotlin/
+
+# NDK / C++
+.externalNativeBuild/
+.cxx/
+
+# Captures (скриншоты тестов и т.п.)
+captures/
+
+# OS/Other
+.DS_Store
+Thumbs.db
+*.log
+*.hprof
+*.prof
+*.jks
+*.keystore
