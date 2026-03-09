@@ -10,7 +10,14 @@
     <string name="camera_back">Тыловая</string>
     <string name="continue_button">Продолжить</string>
 
-    <string name="onboarding_1_text">Добро пожаловать! Это приложение помогает следить за осанкой.</string>
-    <string name="onboarding_2_text">Держите телефон на правильном расстоянии от глаз.</string>
-    <string name="onboarding_3_text">Не наклоняйте голову слишком сильно.</string>
+    <string name="onboarding_title_1">Береги шею и глаза</string>
+    <string name="onboarding_desc_1">1-6 часов чтения с телефоном → боль в шее и глазах</string>
+
+    <string name="onboarding_title_2">Умный контроль</string>
+    <string name="onboarding_desc_2">Следим за наклоном телефона и расстоянием до экрана</string>
+
+    <string name="onboarding_title_3">Мягкая помощь</string>
+    <string name="onboarding_desc_3">Напоминания и автопауза при опасной позе\nРаботает поверх любых приложений</string>
+
+
 </resources>

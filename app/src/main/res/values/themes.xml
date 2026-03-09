@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Базовая тема Material 3 с поддержкой светлой/тёмной темы -->
+    <style name="Theme.WeReadCorrently" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary (основной цвет – серый, как у твоих кнопок) -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
 
-    <style name="Theme.WeReadCorrently" parent="Theme.AppCompat.Light.DarkActionBar" />
+        <!-- Secondary (серые кнопки) -->
+        <item name="colorSecondary">@color/gray_button</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/on_gray_button</item>
+
+        <!-- Background (фон экрана) и Surface (фон карточек) -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Error (красный для ошибок и предупреждений) -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+
+        <!-- Цвета текста по умолчанию -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Цвет строки состояния и навигации -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+    </style>
 </resources>

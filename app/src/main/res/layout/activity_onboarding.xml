@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.OnboardingActivity">
 
     <!-- ViewPager2 для трёх подсказок -->
@@ -23,6 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Пропустить"
+        android:backgroundTint="@color/gray_button"
+        android:textColor="@color/on_gray_button"
         android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,25 +58,32 @@
             android:id="@+id/checkboxAlert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Включить уведомления"/>
+            android:text="Включить уведомления"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/gray_button"/>
 
         <CheckBox
             android:id="@+id/checkboxSound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Звук"/>
+            android:text="Звук"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/gray_button"/>
 
         <CheckBox
             android:id="@+id/checkboxVibration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Вибрация"/>
+            android:text="Вибрация"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/gray_button"/>
 
         <!-- Переключатель камеры (фронтальная/тыловая) – можно сделать RadioGroup -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Камера:"
+            android:textColor="@color/text_primary"
             android:layout_marginTop="8dp"/>
 
         <RadioGroup
@@ -87,13 +97,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Фронтальная"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/gray_button"
                 android:checked="true"/>
 
             <RadioButton
                 android:id="@+id/radioBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тыловая"/>
+                android:text="Тыловая"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/gray_button"/>
         </RadioGroup>
 
         <!-- Кнопка продолжения -->
@@ -102,6 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Продолжить"
+            android:backgroundTint="@color/gray_button"
+            android:textColor="@color/on_gray_button"
             android:layout_marginTop="16dp"/>
 
     </LinearLayout>
