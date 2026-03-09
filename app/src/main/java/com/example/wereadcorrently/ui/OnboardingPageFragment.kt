@@ -25,20 +25,24 @@ class OnboardingPageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val page = arguments?.getInt(ARG_PAGE) ?:0
         val imageView = view.findViewById<ImageView>(R.id.onboardingImage)
-        val textView = view.findViewById<TextView>(R.id.onboardingText)
+        val textView = view.findViewById<TextView>(R.id.onboardingTitle)
 
         when(page){
             0 -> {
                 imageView.setImageResource(R.drawable.ic_onboarding_1)
-                textView.setText(R.string.onboarding_1_text)
+                textView.setText(R.string.onboarding_title_1)
+                textView.setText(R.string.onboarding_desc_1)
+
             }
             1 -> {
                 imageView.setImageResource(R.drawable.ic_onboarding_2)
-                textView.setText(R.string.onboarding_2_text)
+                textView.setText(R.string.onboarding_title_2)
+                textView.setText(R.string.onboarding_desc_2)
             }
             2 -> {
                 imageView.setImageResource(R.drawable.ic_onboarding_3)
-                textView.setText(R.string.onboarding_3_text)
+                textView.setText(R.string.onboarding_title_3)
+                textView.setText(R.string.onboarding_desc_3)
             }
         }
     }
