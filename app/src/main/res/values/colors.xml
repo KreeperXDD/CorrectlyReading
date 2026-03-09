@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!--  Основной фон экрана (белый) -->
+    <color name="background">#FFFFFF</color>
+
+    <!--  Фон карточек и панелей (светло-серый) -->
+    <color name="surface">#D1D0D0</color>
+
+    <!-- ===== Цвета текста (всегда чёрный/серый) ===== -->
+    <!-- Основной текст (заголовки, кнопки) -->
+    <color name="text_primary">#101010</color>
+    <!-- Второстепенный текст (подписи, подсказки) -->
+    <color name="text_secondary">#525050</color>
+
+    <!-- ===== Серые кнопки (основные действия) ===== -->
+    <!-- Цвет самой кнопки -->
+    <color name="gray_button">#9E9E9E</color>
+    <!-- Текст на серой кнопке  -->
+    <color name="on_gray_button">#141313</color>
+
+    <!-- ===== Зелёные кнопки (успех, "Добавить данные") ===== -->
+    <color name="success">#8FF093</color>
+    <color name="on_success">#0F0E0E</color>
+
+    <!-- ===== Красные кнопки (опасные действия, предупреждения) ===== -->
+    <color name="error">#ED685F</color>
+    <color name="on_error">#0F0E0E</color>
+
+    <!-- ===== Дополнительно: основной цвет темы (может совпадать с серым) ===== -->
+    <!-- Material Design требует primary, поэтому зададим его серым -->
+    <color name="primary">#878686</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Вариант primary для тёмной темы (пока не используется, но пусть будет) -->
+    <color name="primary_dark">#757575</color>
 </resources>
