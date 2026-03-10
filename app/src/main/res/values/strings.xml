@@ -19,5 +19,9 @@
     <string name="onboarding_title_3">Мягкая помощь</string>
     <string name="onboarding_desc_3">Напоминания и автопауза при опасной позе\nРаботает поверх любых приложений</string>
 
+    <string name="main_screen">Главный экран</string>
+    <string name="start">Старт</string>
+    <string name="history">История</string>
+    <string name="statistics">Статистика</string>
 
 </resources>
