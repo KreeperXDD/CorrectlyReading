@@ -37,4 +37,13 @@
         android:textColor="@color/text_primary"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Далее"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        style="@style/Widget.Material3.Button" />
+
 </LinearLayout>

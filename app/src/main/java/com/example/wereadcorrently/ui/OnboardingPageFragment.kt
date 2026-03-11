@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -25,24 +26,32 @@ class OnboardingPageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val page = arguments?.getInt(ARG_PAGE) ?:0
         val imageView = view.findViewById<ImageView>(R.id.onboardingImage)
-        val textView = view.findViewById<TextView>(R.id.onboardingTitle)
+        val textTittle = view.findViewById<TextView>(R.id.onboardingTitle)
+        val textDescription = view.findViewById<TextView>(R.id.onboardingDescription)
+        val actionButton = view.findViewById<Button>(R.id.actionButton)
 
         when(page){
             0 -> {
-                imageView.setImageResource(R.drawable.ic_onboarding_1)
-                textView.setText(R.string.onboarding_title_1)
-                textView.setText(R.string.onboarding_desc_1)
+                imageView.setImageResource(R.drawable.ic_book)
+                textTittle.setText(R.string.onboarding_title_1)
+                textDescription.setText(R.string.onboarding_desc_1)
+                actionButton.visibility = View.GONE
 
             }
             1 -> {
-                imageView.setImageResource(R.drawable.ic_onboarding_2)
-                textView.setText(R.string.onboarding_title_2)
-                textView.setText(R.string.onboarding_desc_2)
+                imageView.setImageResource(R.drawable.ic_book)
+                textTittle.setText(R.string.onboarding_title_2)
+                textDescription.setText(R.string.onboarding_desc_2)
+                actionButton.visibility = View.GONE
             }
             2 -> {
-                imageView.setImageResource(R.drawable.ic_onboarding_3)
-                textView.setText(R.string.onboarding_title_3)
-                textView.setText(R.string.onboarding_desc_3)
+                imageView.setImageResource(R.drawable.ic_book)
+                textTittle.setText(R.string.onboarding_title_3)
+                textDescription.setText(R.string.onboarding_desc_3)
+                actionButton.visibility = View.VISIBLE
+                actionButton.setOnClickListener {
+                    (requireActivity() as? OnboardingActivity)?.showQuickSetup()
+                }
             }
         }
     }

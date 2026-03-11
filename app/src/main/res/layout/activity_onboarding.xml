@@ -45,81 +45,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Предпросмотр камеры (CameraX PreviewView) -->
-        <androidx.camera.view.PreviewView
-            android:id="@+id/previewView"
+        <!-- ViewPager2 для трёх экранов настройки -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/setupViewPager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginBottom="16dp"/>
+            android:layout_weight="1" />
 
-        <!-- Опции настройки -->
-        <CheckBox
-            android:id="@+id/checkboxAlert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Включить уведомления"
-            android:textColor="@color/text_primary"
-            android:buttonTint="@color/gray_button"/>
-
-        <CheckBox
-            android:id="@+id/checkboxSound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Звук"
-            android:textColor="@color/text_primary"
-            android:buttonTint="@color/gray_button"/>
-
-        <CheckBox
-            android:id="@+id/checkboxVibration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Вибрация"
-            android:textColor="@color/text_primary"
-            android:buttonTint="@color/gray_button"/>
-
-        <!-- Переключатель камеры (фронтальная/тыловая) – можно сделать RadioGroup -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Камера:"
-            android:textColor="@color/text_primary"
-            android:layout_marginTop="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/radioGroupCamera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioFront"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Фронтальная"
-                android:textColor="@color/text_primary"
-                android:buttonTint="@color/gray_button"
-                android:checked="true"/>
-
-            <RadioButton
-                android:id="@+id/radioBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Тыловая"
-                android:textColor="@color/text_primary"
-                android:buttonTint="@color/gray_button"/>
-        </RadioGroup>
-
-        <!-- Кнопка продолжения -->
-        <Button
-            android:id="@+id/continueButton"
+        <!-- Индикатор страниц -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabDots"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Продолжить"
-            android:backgroundTint="@color/gray_button"
-            android:textColor="@color/on_gray_button"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            app:tabBackground="@drawable/dot_indicator_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/primary"
+            app:tabTextColor="@color/gray" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Готово"
+            android:visibility="gone"
+            style="@style/Widget.Material3.Button" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

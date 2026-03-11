@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Где ты читаешь?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Выбери основное место для чтения"
+        android:textSize="16sp"
+        android:textColor="@color/gray" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:checkedChip="@id/chipTransport">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTransport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Транспорт"
+            style="@style/Widget.Material3.Chip.Assist"
+            app:chipIcon="@drawable/ic_transport" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дома"
+            style="@style/Widget.Material3.Chip.Assist"
+            app:chipIcon="@drawable/ic_home" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В темноте"
+            style="@style/Widget.Material3.Chip.Assist"
+            app:chipIcon="@drawable/ic_night" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>

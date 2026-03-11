@@ -33,4 +33,8 @@
 
     <!-- Вариант primary для тёмной темы (пока не используется, но пусть будет) -->
     <color name="primary_dark">#757575</color>
+
+    <color name="black">#000000</color>
+    <color name="gray">#CDCDCDCD</color>
+
 </resources>
